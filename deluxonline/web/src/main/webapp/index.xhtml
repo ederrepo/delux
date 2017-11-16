@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <h:head>	
+		<title>Country</title>
+	</h:head>
+	
+	<h:body>
+			Add Country bb
+		
+		<h:form>	
+			<h:outputLabel value="Country ID: " />
+			<h:inputText value="#{countryBean.country.countryId}" />
+			
+			<br/>
+			<br/>
+			
+			<h:outputLabel value="Country Name: " />
+			<h:inputText value="#{countryBean.country.countryNm}" />
+			
+			<br/>
+			<br/>
+			
+			<h:commandButton label="Guardar" action="#{countryBean.save()}"/>
+			<h:commandButton label="Mostrar" action="#{countryBean.getCountrys()}"/>
+			
+			<br/>
+			<br/>
+			
+			<h:outputLabel value="Country ID: " />
+			<h:outputText value="#{countryBean.country.countryId}" />
+			
+			<br/>
+			<br/>
+			
+			<h:outputLabel value="Country Name: " />
+			<h:outputText value="#{countryBean.country.countryNm}" />
+		
+		</h:form>	
+	</h:body>
+</html>
