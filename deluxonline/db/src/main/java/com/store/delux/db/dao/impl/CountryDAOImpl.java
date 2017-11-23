@@ -13,9 +13,9 @@ public class CountryDAOImpl implements CountryDAO {
 	public Integer save(Country country) throws Exception {
 		session = new HibernateUtil().getCurrentSession();
 		Integer result;
-		 
+		System.out.println("SAVE 3");
 		result = (Integer) session.save(country);
-		 
+		System.out.println("SAVE 4");
 		return result;
 	}
 

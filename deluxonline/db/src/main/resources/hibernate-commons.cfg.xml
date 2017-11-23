@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+		
+<hibernate-configuration>        
+   <session-factory name="SCHEMA">
+        <!-- Configuration -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">admin4</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/delux_schema</property>
+        
+        <!-- Dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        
+        <property name="hibernate.cache.use_query_cache">true</property>
+	    <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.default_schema">delux_schema</property>        
+     
+        <mapping package="com.store.delux.db.entity"/>
+        <mapping class="com.store.delux.db.entity.AccountCharge"/>
+        <mapping class="com.store.delux.db.entity.Accounts"/>
+        <mapping class="com.store.delux.db.entity.AccountType"/>
+        <mapping class="com.store.delux.db.entity.Category"/>
+		<mapping class="com.store.delux.db.entity.Country"/>
+		<mapping class="com.store.delux.db.entity.Customer"/>
+		<mapping class="com.store.delux.db.entity.CustomerDataInvoice"/>
+		<mapping class="com.store.delux.db.entity.Employee"/>
+		<mapping class="com.store.delux.db.entity.PaymentType"/>
+		<mapping class="com.store.delux.db.entity.Products"/>
+		<mapping class="com.store.delux.db.entity.Provider"/>
+		<mapping class="com.store.delux.db.entity.Role"/>
+		<mapping class="com.store.delux.db.entity.Sale"/>
+		<mapping class="com.store.delux.db.entity.SaleDescription"/>
+		<mapping class="com.store.delux.db.entity.SaleMethod"/>
+		<mapping class="com.store.delux.db.entity.State"/>
+		<mapping class="com.store.delux.db.entity.Utility"/>                  
+    </session-factory>
+</hibernate-configuration>

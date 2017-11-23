@@ -7,7 +7,6 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
 public class HibernateUtil {
@@ -22,10 +21,11 @@ public class HibernateUtil {
         	
         if(sessionFactory==null || sessionFactory.isClosed()){ 	
         	Configuration configuration = new Configuration();	
-        	configuration.configure("hibernate-commons.cfg.xml");
-        	StandardServiceRegistryBuilder ssrb = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
-        	sessionFactory = configuration.buildSessionFactory(ssrb.build());	
+        	configuration.configure("hibernate-commons.cfg.xml");        	
+        	sessionFactory = configuration.buildSessionFactory();
+        	
         }	        
+        
         
         }catch (Throwable ex) {
             // Make sure you log the exception, as it might be swallowed
