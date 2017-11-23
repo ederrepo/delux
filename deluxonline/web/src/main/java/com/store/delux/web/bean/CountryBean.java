@@ -24,10 +24,14 @@ public class CountryBean implements Serializable {
 		country = new CountryDTO();
 		countryService = new CountryServiceImpl();
 		
+		
 	}
 	
-	public void save() throws Exception{
+	public String save() throws Exception{
+		System.out.println("SAVE 1"); 
 		countryService.save(country);
+		
+		return null;
 	}
 	
 	public String getCountrys() throws Exception{
