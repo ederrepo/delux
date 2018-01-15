@@ -1,6 +1,7 @@
 package com.store.delux.db.entity;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.sql.Timestamp;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,14 +14,14 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="dlx_customer")
-public class Customer  implements Serializable {
+@Table(name="DLX_CUSTOMER")
+public class Customer implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	 
-	@Id @GeneratedValue(strategy=IDENTITY)	    
+	@Id @GeneratedValue(strategy=IDENTITY)
     @Column(name="CSTMR_ID", unique=true, nullable=false)
-	private Integer cstmrId;
+	private BigInteger cstmrId;
 	
 	@ManyToOne(fetch=FetchType.EAGER, targetEntity=State.class)
     @JoinColumn(name="STATE")
@@ -52,12 +53,21 @@ public class Customer  implements Serializable {
     
     @Column(name="DATE_REG", length=19)
     private Timestamp dateReg;
+    
+    @Column(name="PASSWORD", nullable=false)
+    private String passwd;
+    
+    @Column(name="NUMEXT")
+    private String numExt;
+    
+    @Column(name="NUNINT")
+    private String numInt;
 
-	public Integer getCstmrId() {
+	public BigInteger getCstmrId() {
 		return cstmrId;
 	}
 
-	public void setCstmrId(Integer cstmrId) {
+	public void setCstmrId(BigInteger cstmrId) {
 		this.cstmrId = cstmrId;
 	}
 
@@ -140,6 +150,32 @@ public class Customer  implements Serializable {
 	public void setDateReg(Timestamp dateReg) {
 		this.dateReg = dateReg;
 	}
+
+	public String getPasswd() {
+		return passwd;
+	}
+
+	public void setPasswd(String passwd) {
+		this.passwd = passwd;
+	}
+
+	public String getNumExt() {
+		return numExt;
+	}
+
+	public void setNumExt(String numExt) {
+		this.numExt = numExt;
+	}
+
+	public String getNumInt() {
+		return numInt;
+	}
+
+	public void setNumInt(String numInt) {
+		this.numInt = numInt;
+	}
+	
+	
 	
 }
 

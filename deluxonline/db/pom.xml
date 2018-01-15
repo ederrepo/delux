@@ -32,23 +32,40 @@
       	<version>0.0.1-SNAPSHOT</version>
   	</dependency>
   	
-  	<dependency>
+  	<!--<dependency>
 		<groupId>org.hibernate</groupId>
 		<artifactId>hibernate-core</artifactId>
-		<version>5.2.10.Final</version>
-	</dependency>
-		
+		<version>4.3.11.Final</version>
+	</dependency> -->	
 	<dependency>
-		<groupId>org.hibernate.common</groupId>
-		<artifactId>hibernate-commons-annotations</artifactId>
-		<version>5.0.1.Final</version>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-core</artifactId>
+    	<version>5.2.12.Final</version>
 	</dependency>
 	
-	 <dependency>
+		
+	<!--<dependency>
+		<groupId>org.hibernate.common</groupId>
+		<artifactId>hibernate-commons-annotations</artifactId>
+		<version>4.0.5.Final</version>
+	</dependency>-->
+	<dependency>
+    	<groupId>org.hibernate.common</groupId>
+    	<artifactId>hibernate-commons-annotations</artifactId>
+    	<version>5.0.1.Final</version>
+	</dependency>
+	
+	<!--  <dependency>
 		<groupId>org.hibernate</groupId>
 		<artifactId>hibernate-validator</artifactId>
-		<version>5.2.4.Final</version>
-	</dependency>  		 
+		<version>4.0.2.GA</version>
+	</dependency>  -->	
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-validator</artifactId>
+    	<version>5.4.1.Final</version>
+	</dependency>
+	  		 
 	
 	<dependency>
 	    <groupId>org.hibernate.javax.persistence</groupId>
@@ -56,18 +73,30 @@
     	<version>1.0.0.Final</version>
 	</dependency>
 			 
+	<!-- <dependency>
+	    <groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-ehcache</artifactId>
+    	<version>4.3.11.Final</version>
+	</dependency>  -->
 	<dependency>
 	    <groupId>org.hibernate</groupId>
     	<artifactId>hibernate-ehcache</artifactId>
-    	<version>5.2.2.Final</version>
+    	<version>5.2.12.Final</version>
 	</dependency>  			 
 	
+	<!-- <dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-testing</artifactId>
+    	<version>4.3.11.Final</version>
+    	<scope>test</scope>
+	</dependency> -->	
 	<dependency>
     	<groupId>org.hibernate</groupId>
     	<artifactId>hibernate-testing</artifactId>
     	<version>5.2.11.Final</version>
     	<scope>test</scope>
 	</dependency>
+	
 	
 	<dependency>
     	<groupId>mysql</groupId>

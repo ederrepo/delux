@@ -15,15 +15,15 @@ public class Country implements Serializable{
 
 	@Id
 	@Column(name="CNTRY_ID", nullable=false)
-	private Integer countryId;
+	private String countryId;
 	
 	@Column(name="CNTRY_NM")
 	private String countryNm;
 		
-	public Integer getCountryId() {
+	public String getCountryId() {
 		return countryId;
 	}
-	public void setCountryId(Integer countryId) {
+	public void setCountryId(String countryId) {
 		this.countryId = countryId;
 	}
 	public String getCountryNm() {
