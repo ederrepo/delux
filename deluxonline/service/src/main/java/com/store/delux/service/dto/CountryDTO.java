@@ -6,13 +6,13 @@ public class CountryDTO implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private Integer countryId;
+	private String countryId;
 	private String countryNm;
 	
-	public Integer getCountryId() {
+	public String getCountryId() {
 		return countryId;
 	}
-	public void setCountryId(Integer countryId) {
+	public void setCountryId(String countryId) {
 		this.countryId = countryId;
 	}
 	public String getCountryNm() {
