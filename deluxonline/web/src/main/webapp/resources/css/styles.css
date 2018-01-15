@@ -1,0 +1,40 @@
+@CHARSET "ISO-8859-1";
+
+/* formato para imagenes incluidas en home.xhtml */ 
+.homeImg{
+	width:300px;
+	height:300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* home.xhtml */
+footer {
+    background-color: #003366;
+    padding: 1%;
+	height:10%;
+	color:#FFF;
+	font-size:11px;
+}
+    
+ .carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+    min-height:200px;
+}
+
+.link{
+	color:silver;
+}
+
+/* primefaces styles */
+.ui-dialog{
+top: 0px !important;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+   display: none !important;
+}
+
+.ui-widget, .ui-widget .ui-widget {
+    font-size: 90%;
+}

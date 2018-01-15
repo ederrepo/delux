@@ -1,0 +1,62 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <h:head>	
+		<title>Log In</title>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>		
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>					
+	</h:head>
+	
+<h:body style="background-color:#003366;"> 	
+	<h:outputStylesheet library="css" name="styles.css" />
+	<h:form class="form-login">
+ 	<div class="container" style="background-color:#fff;margin:1%;width:82%;">        
+        	<br/>
+        	<div align="center">        		
+        		<p:graphicImage library="img/icons" name="login.png" styleClass="img-responsive"
+        			width="25%" height="25%"/>        			        	
+        	</div>    	
+        	
+        	<hr/>       
+            	<p:messages autoUpdate="true" showDetail="true" closable="true"/>    
+            	<div class="form-group has-feedback has-feedback-left">
+            		<i class="form-control-feedback glyphicon glyphicon-user"></i>            
+                	<p:inputText id="username" styleClass="form-control" placeholder="Nombre de usuario.."
+                				value="#{loginBean.username}" onkeypress="validateNumber(event);"
+                				maxlength="11"
+                				required="true" requiredMessage="Nombre de usuario es requerido"/>                	 			
+                </div>
+                
+                <div class="form-group has-feedback has-feedback-left">
+            		<i class="form-control-feedback glyphicon glyphicon-lock"></i>
+                	<p:password id="password" styleClass="form-control" placeholder="Contraseña.."
+                				value="#{loginBean.password}" 
+                				required="true" requiredMessage="Contraseña es requerida"/>
+                </div>
+                
+                <p:commandButton styleClass="btn btn-lg btn-primary btn-block btn-signin" value="Ingresar"
+                				action="#{loginBean.signIn}"/>            		
+       
+            <hr/>
+            <br/>
+            <div align="center">
+            <a href="#" class="forgot-password">
+                ¿Olvidaste tu contraseña?
+            </a>
+            <br/>
+            <br/>
+            <a href="#" class="forgot-password">
+                Crea una cuenta nueva
+            </a>            
+            </div>
+            <br/>
+        </div>
+         </h:form>
+    <h:outputScript library="js" name="delux.js"/>
+</h:body>
+</f:view>
+</html>	
