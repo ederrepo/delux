@@ -1,5 +1,12 @@
 @CHARSET "ISO-8859-1";
 
+/* header */
+@media screen and (max-width: 600px) {
+.banner{
+display:none;
+}
+}
+
 /* formato para imagenes incluidas en home.xhtml */ 
 .homeImg{
 	width:300px;
@@ -26,6 +33,13 @@ footer {
 	color:silver;
 }
 
+/* products.xhtml */
+.selectItem{
+	color:blue;
+	margin-left:15%;
+	font-size:12px;
+}
+
 /* primefaces styles */
 .ui-dialog{
 top: 0px !important;
@@ -37,4 +51,9 @@ top: 0px !important;
 
 .ui-widget, .ui-widget .ui-widget {
     font-size: 90%;
+}
+
+.companyHeaderGrid.ui-panelgrid>*>tr,
+.companyHeaderGrid.ui-panelgrid .ui-panelgrid-cell {
+    border: none;
 }

@@ -9,6 +9,11 @@ function newUserAccount(){
 	console.info("newUser");
 }
 
+function goProducts(){
+	document.getElementById('headerForm:products').click();
+	console.info("products");
+}
+
 function validateNumber(evt) {
 	  var theEvent = evt || window.event;
 	  var key = theEvent.keyCode || theEvent.which;

@@ -1,0 +1,258 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <h:head>	
+		<title>Delux Computación</title>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>		
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>			
+	</h:head>
+	
+	<h:body style="background-color:#F2F4F4;">
+			<h:outputStylesheet library="css" name="styles.css"/>
+			
+			<ui:include src="/pages/templates/header.xhtml" >
+				<ui:param name="head" value="#{productBean.headBean}"></ui:param>
+			</ui:include>
+					
+			<div class="container" style="background-color:white;margin-left:10px;margin-top:-20px;width:97%;">								
+			<h:form id="prodForm">
+			<p:messages autoUpdate="true" showDetail="true" closable="true" style="font-size:12px;"/>
+			
+			 <div class="row content">
+
+    			<div class="col-sm-2 sidenav">    
+    	     		<hr/>
+    				 	<h4 style="color:blue;">Filtros</h4>
+      				 <hr/>
+    	     		<div class="panel-group">
+							<div class="panel panel-default" style="width:100%;">
+            						<div class="panel-heading" style="background-color:#fff;">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" href="#f1" style="color:#003366;font-weight:bold;">
+												Categoria
+											</a>
+										</h4>
+									</div>
+                
+   									<div id="f1" class="panel-collapse collapse">
+											<h:selectManyCheckbox layout="pageDirection" styleClass="selectItem">
+												<f:selectItem itemLabel="Acer" itemValue="1" />
+												<f:selectItem itemLabel="Toshiba" itemValue="2" />
+												<f:selectItem itemLabel="Hp" itemValue="3" />
+											</h:selectManyCheckbox> 
+			   						</div>
+              				</div>
+              				
+              				<div class="panel panel-default" style="width:100%;">
+            						<div class="panel-heading" style="background-color:#fff;">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" href="#f2" style="color:#003366;font-weight:bold;">
+												Marca
+											</a>
+										</h4>
+									</div>
+                
+   									<div id="f2" class="panel-collapse collapse">
+										<h:selectManyCheckbox layout="pageDirection" styleClass="selectItem">
+												<f:selectItem itemLabel="Acer" itemValue="1" />
+												<f:selectItem itemLabel="Toshiba" itemValue="2" />
+												<f:selectItem itemLabel="Hp" itemValue="3" />
+										</h:selectManyCheckbox>
+			   						</div>
+              				</div>
+              				
+              				<div class="panel panel-default" style="width:100%;">
+            						<div class="panel-heading" style="background-color:#fff;">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" href="#f3" style="color:#003366;font-weight:bold;">
+												Modelo
+											</a>
+										</h4>
+									</div>
+                
+   									<div id="f3" class="panel-collapse collapse">
+										<h:selectManyCheckbox layout="pageDirection" styleClass="selectItem">
+												<f:selectItem itemLabel="Acer" itemValue="1" />
+												<f:selectItem itemLabel="Toshiba" itemValue="2" />
+												<f:selectItem itemLabel="Hp" itemValue="3" />
+										</h:selectManyCheckbox>
+			   						</div>
+              				</div>
+              				
+              				<div class="panel panel-default" style="width:100%;">
+            						<div class="panel-heading" style="background-color:#fff;">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" href="#f4" style="color:#003366;font-weight:bold;">
+												Procesador
+											</a>
+										</h4>
+									</div>
+                
+   									<div id="f4" class="panel-collapse collapse">
+										<h:selectManyCheckbox layout="pageDirection" styleClass="selectItem">
+												<f:selectItem itemLabel="Acer" itemValue="1" />
+												<f:selectItem itemLabel="Toshiba" itemValue="2" />
+												<f:selectItem itemLabel="Hp" itemValue="3" />
+										</h:selectManyCheckbox>
+			   						</div>
+              				</div>
+              				
+              				<div class="panel panel-default" style="width:100%;">
+            						<div class="panel-heading" style="background-color:#fff;">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" href="#f5" style="color:#003366;font-weight:bold;">
+												Disco Duro
+											</a>
+										</h4>
+									</div>
+                
+   									<div id="f5" class="panel-collapse collapse">
+										<h:selectManyCheckbox layout="pageDirection" styleClass="selectItem">
+												<f:selectItem itemLabel="Acer" itemValue="1" />
+												<f:selectItem itemLabel="Toshiba" itemValue="2" />
+												<f:selectItem itemLabel="Hp" itemValue="3" />
+										</h:selectManyCheckbox>
+			   						</div>
+              				</div>
+              				
+              				<div class="panel panel-default" style="width:100%;">
+            						<div class="panel-heading" style="background-color:#fff;">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" href="#f6" style="color:#003366;font-weight:bold;">
+												Memoria RAM
+											</a>
+										</h4>
+									</div>
+                
+   									<div id="f6" class="panel-collapse collapse">
+										<h:selectManyCheckbox layout="pageDirection" styleClass="selectItem">
+												<f:selectItem itemLabel="Acer" itemValue="1" />
+												<f:selectItem itemLabel="Toshiba" itemValue="2" />
+												<f:selectItem itemLabel="Hp" itemValue="3" />
+										</h:selectManyCheckbox>
+			   						</div>
+              				</div>
+              				
+              				<div class="panel panel-default" style="width:100%;">
+            						<div class="panel-heading" style="background-color:#fff;">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" href="#f7" style="color:#003366;font-weight:bold;">
+												Precio
+											</a>
+										</h4>
+									</div>
+                
+   									<div id="f7" class="panel-collapse collapse">
+										<h:selectManyCheckbox layout="pageDirection" styleClass="selectItem">
+												<f:selectItem itemLabel="Acer" itemValue="1" />
+												<f:selectItem itemLabel="Toshiba" itemValue="2" />
+												<f:selectItem itemLabel="Hp" itemValue="3" />
+										</h:selectManyCheckbox>
+			   						</div>
+              				</div>
+              				
+              				<div class="panel panel-default" style="width:100%;">
+            						<div class="panel-heading" style="background-color:#fff;">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" href="#f8" style="color:#003366;font-weight:bold;">
+												Tamaño
+											</a>
+										</h4>
+									</div>
+                
+   									<div id="f8" class="panel-collapse collapse">
+										<h:selectManyCheckbox layout="pageDirection" styleClass="selectItem">
+												<f:selectItem itemLabel="Acer" itemValue="1" />
+												<f:selectItem itemLabel="Toshiba" itemValue="2" />
+												<f:selectItem itemLabel="Hp" itemValue="3" />
+										</h:selectManyCheckbox>
+			   						</div>
+              				</div>
+              				
+              				<div class="panel panel-default" style="width:100%;">
+            						<div class="panel-heading" style="background-color:#fff;">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" href="#f9" style="color:#003366;font-weight:bold;">
+												Almacenamiento
+											</a>
+										</h4>
+									</div>
+                
+   									<div id="f9" class="panel-collapse collapse">
+										<h:selectManyCheckbox layout="pageDirection" styleClass="selectItem">
+												<f:selectItem itemLabel="Acer" itemValue="1" />
+												<f:selectItem itemLabel="Toshiba" itemValue="2" />
+												<f:selectItem itemLabel="Hp" itemValue="3" />
+										</h:selectManyCheckbox>
+			   						</div>
+              				</div>
+              				<br/>
+              				<div class="panel panel-default" style="width:100%;">
+              					<h:commandButton styleClass="btn btn-primary" value="Limpiar filtro"
+              									style="width:100%;"/>
+              				</div>	
+					</div>
+				</div>
+				
+    			<div class="col-sm-10">
+    				 <hr/>
+    				 	<h4 style="color:blue;">Lista de productos</h4>
+      				 <hr/>
+				
+					<p:dataGrid id="productGrid" var="prod" value="#{productBean.productList}" columns="4"  layout="grid"			
+        					rows="5" paginator="true" paginatorPosition="bottom" style="border-color:#fff;">
+ 
+        			<p:panel header="#{prod.prodCode}" style="text-align:center;font-size:10px">
+            			<h:panelGrid columns="1" style="width:100%">
+            				<div align="center">
+                			<p:graphicImage name="/img/productos/#{prod.prodImg}.jpg" width="150px" height="150px"/> 
+ 							
+                			<h:outputText value="#{prod.prodName} (5)" style="font-size:11px"/>                			
+                			
+                			<h:panelGroup>
+                				<h:commandButton styleClass="btn btn-primary" image="/resources/img/icons/searchw.png"
+                								style="heigth:40px;width:40px;display:inline;" alt="Ver detalle"
+                								onclick="$('#detail').modal('show');">                								
+                						<f:ajax execute="@this" render=":detailForm"/>
+                				</h:commandButton>				
+                				<h:outputText value="$5750.00" style="font-size:16px;color:red;font-weight:bold;
+                								display:inline;margin-left:40%;"/>
+                			</h:panelGroup>
+                			</div>				
+            			</h:panelGrid>
+        			</p:panel>
+       				</p:dataGrid>	
+				</div>
+			</div>
+			</h:form>			
+			</div>
+			
+			<div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-labelledby="detail" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+    			<div class="modal-dialog modal-lg">
+        			<div class="modal-content">
+						<h:form id="detailForm">            
+                		<div class="modal-header">
+                			<button type="button" class="close" data-dismiss="modal">x</button>
+                    		<h4 class="modal-title">Detalle del producto</h4>
+                		</div>
+                		
+                		<div class="modal-body">                
+       						<div class="container" style="margin:1%;width:82%;font-size:11px;">       				        
+        					    	
+        					</div>             
+                		</div>
+      					</h:form>
+      	
+        			</div>
+    			</div>
+    		</div>
+			
+				
+					
+	</h:body>
+</f:view>	
+</html>

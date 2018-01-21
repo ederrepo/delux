@@ -51,15 +51,18 @@ public class HeadBean extends BaseBean{
 		return null;
 	}
 	
-	public void reset(){
-		System.out.println("RESET");
+	public void reset(){		
 		username = "";
 		password = "";
 	}
 	
-	public String newUserAccount(){
-		System.out.println("NEW USER");
+	public String newUserAccount(){		
 		return "/pages/online/newUserAccount?faces-redirect=true";
+	}
+	
+	public String goProducts(){
+		System.out.println("GO PROD");
+		return "/pages/online/products?faces-redirect=true";
 	}
 
 	public String getUsername() {
