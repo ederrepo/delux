@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <h:head>	
+		<title>Delux Computación</title>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>		
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>			
+	</h:head>
+	
+	<h:body style="background-color:#F2F4F4;">
+			<h:outputStylesheet library="css" name="styles.css"/>
+			
+			<ui:include src="/pages/templates/header.xhtml" >
+				<ui:param name="head" value="#{detailBean.headBean}"></ui:param>
+			</ui:include>
+					
+			<div class="container" style="background-color:white;">
+								
+			<h:form id="newUser">
+			<p:messages autoUpdate="true" showDetail="true" closable="true" style="font-size:12px;"/>
+			
+				Purchase detail
+			</h:form>
+			</div>
+			
+	</h:body>
+</f:view>	
+</html>

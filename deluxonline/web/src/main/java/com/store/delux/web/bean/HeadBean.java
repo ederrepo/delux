@@ -1,9 +1,13 @@
 package com.store.delux.web.bean;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.store.delux.commons.Constants;
 import com.store.delux.service.dto.CustomerDTO;
+import com.store.delux.service.dto.PurchasedProductDTO;
+import com.store.delux.service.dto.PurchasesDTO;
 import com.store.delux.service.service.HeadService;
 import com.store.delux.service.service.impl.HeadServiceImpl;
 
@@ -21,6 +25,7 @@ public class HeadBean extends BaseBean{
 	private boolean loged;
 	
 	private CustomerDTO customer;
+	private PurchasesDTO purchases;
 	
 	private HeadService headService;
 	
@@ -31,6 +36,10 @@ public class HeadBean extends BaseBean{
 		loged = false;
 		
 		headService = new HeadServiceImpl();
+		
+		purchases = new PurchasesDTO();
+		List<PurchasedProductDTO> pchProduct = new ArrayList<PurchasedProductDTO>();
+		purchases.setProductsList(pchProduct);
 	}
 	
 	public String signIn() throws NumberFormatException, Exception{		
@@ -60,8 +69,12 @@ public class HeadBean extends BaseBean{
 		return "/pages/online/newUserAccount?faces-redirect=true";
 	}
 	
+	public String finalPurch(){
+		return "/pages/online/purchaseDetail?faces-redirect=true";
+		
+	}
+	
 	public String goProducts(){
-		System.out.println("GO PROD");
 		return "/pages/online/products?faces-redirect=true";
 	}
 
@@ -95,6 +108,14 @@ public class HeadBean extends BaseBean{
 
 	public void setCustomer(CustomerDTO customer) {
 		this.customer = customer;
+	}
+
+	public PurchasesDTO getPurchases() {
+		return purchases;
+	}
+
+	public void setPurchases(PurchasesDTO purchases) {
+		this.purchases = purchases;
 	}
 
 	public boolean isLoged() {

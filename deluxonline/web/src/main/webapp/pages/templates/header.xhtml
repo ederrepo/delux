@@ -51,9 +51,11 @@
       		   			</a>	
 		       		</li> 			
 		        	<li><h:panelGrid columns="2" style="margin-left:4%">
-		        		<p:graphicImage library="img/icons" name="shopping_bag.png" style="margin-top:7px;"/>		        		
-		        		<h:outputLabel style="margin-top:15px;margin-left:4%;color:#fff;margin-right:20px;"
-		        					  value="(0)" />
+		        		<a href="#" onclick="$('#shpCart').modal('show');" class="link">
+		        			<img  src="/delux/resources/img/icons/shopping_bag.png"  style="margin-top:7px;"/>
+		        			<h:outputLabel style="margin-top:15px;margin-left:4%;color:#fff;margin-right:20px;"
+		        						  value="(0)" />
+		        		</a>				  
 		        		</h:panelGrid>		        		
 		        	</li>		        				        			
         			<li>
@@ -145,6 +147,52 @@
       	
         </div>
     </div>
-	</div>	
+	</div>
+	
+	
+	<!-- Shopping cart dialog -->	
+	<div class="modal fade" id="shpCart" tabindex="-1" role="dialog" aria-labelledby="shpCart" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+			<h:form id="shpForm">            
+                <div class="modal-header">
+                	<button type="button" class="close" data-dismiss="modal">x</button>
+                    <h4 class="modal-title">Compras</h4>
+                </div>
+                
+                <center>
+                <div class="modal-body">                
+       				<div class="container" style="margin:1%;width:82%;font-size:11px;">
+       				
+						<h:dataTable value="#{head.purchases.productsList}" var="prod" styleClass="table table-sm" style="font-size:11px;">
+							<h:column>								
+								<h:outputText value="#{prod.prodCode}"/>
+							</h:column>
+							
+							<h:column>								
+								<h:outputText value="#{prod.prodName}"/>
+							</h:column>
+							
+							<h:column>
+								<h:outputText value="#{prod.qty}"/>
+							</h:column>
+							
+							<h:column>
+								<h:outputText value="#{prod.price}"/>
+							</h:column>
+						</h:dataTable>
+						<br/>
+						<h:commandButton value="Finalizar compra" styleClass="btn btn-primary"
+										action="#{head.finalPurch}"/> 				        
+  					</div>               
+                </div>          
+          </center>      
+          <p:commandButton style="display:none;" id="shpFinish" onclick="$('#shpCart').modal('close');" action="#{head.finalPurch}"/>
+      	</h:form>
+        </div>
+    </div>
+	</div>		
+	
+	
 </f:view>
 </ui:composition>
