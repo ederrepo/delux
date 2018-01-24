@@ -32,7 +32,8 @@
 							<div class="panel panel-default" style="width:100%;">
             						<div class="panel-heading" style="background-color:#fff;">
 										<h4 class="panel-title">
-											<a data-toggle="collapse" href="#f1" style="color:#003366;font-weight:bold;">
+											<a data-toggle="collapse" href="#f1" style="color:#003366;font-weight:bold;
+												font-size:12px;">
 												Categoria
 											</a>
 										</h4>
@@ -50,7 +51,8 @@
               				<div class="panel panel-default" style="width:100%;">
             						<div class="panel-heading" style="background-color:#fff;">
 										<h4 class="panel-title">
-											<a data-toggle="collapse" href="#f2" style="color:#003366;font-weight:bold;">
+											<a data-toggle="collapse" href="#f2" style="color:#003366;font-weight:bold;
+											   font-size:12px;">
 												Marca
 											</a>
 										</h4>
@@ -68,7 +70,8 @@
               				<div class="panel panel-default" style="width:100%;">
             						<div class="panel-heading" style="background-color:#fff;">
 										<h4 class="panel-title">
-											<a data-toggle="collapse" href="#f3" style="color:#003366;font-weight:bold;">
+											<a data-toggle="collapse" href="#f3" style="color:#003366;font-weight:bold;
+												font-size:12px;">
 												Modelo
 											</a>
 										</h4>
@@ -86,7 +89,8 @@
               				<div class="panel panel-default" style="width:100%;">
             						<div class="panel-heading" style="background-color:#fff;">
 										<h4 class="panel-title">
-											<a data-toggle="collapse" href="#f4" style="color:#003366;font-weight:bold;">
+											<a data-toggle="collapse" href="#f4" style="color:#003366;font-weight:bold;
+												font-size:12px;">
 												Procesador
 											</a>
 										</h4>
@@ -104,7 +108,8 @@
               				<div class="panel panel-default" style="width:100%;">
             						<div class="panel-heading" style="background-color:#fff;">
 										<h4 class="panel-title">
-											<a data-toggle="collapse" href="#f5" style="color:#003366;font-weight:bold;">
+											<a data-toggle="collapse" href="#f5" style="color:#003366;font-weight:bold;
+												font-size:12px;">
 												Disco Duro
 											</a>
 										</h4>
@@ -122,7 +127,8 @@
               				<div class="panel panel-default" style="width:100%;">
             						<div class="panel-heading" style="background-color:#fff;">
 										<h4 class="panel-title">
-											<a data-toggle="collapse" href="#f6" style="color:#003366;font-weight:bold;">
+											<a data-toggle="collapse" href="#f6" style="color:#003366;font-weight:bold;
+												font-size:12px;">
 												Memoria RAM
 											</a>
 										</h4>
@@ -140,7 +146,8 @@
               				<div class="panel panel-default" style="width:100%;">
             						<div class="panel-heading" style="background-color:#fff;">
 										<h4 class="panel-title">
-											<a data-toggle="collapse" href="#f7" style="color:#003366;font-weight:bold;">
+											<a data-toggle="collapse" href="#f7" style="color:#003366;font-weight:bold;
+												font-size:12px;">
 												Precio
 											</a>
 										</h4>
@@ -158,7 +165,8 @@
               				<div class="panel panel-default" style="width:100%;">
             						<div class="panel-heading" style="background-color:#fff;">
 										<h4 class="panel-title">
-											<a data-toggle="collapse" href="#f8" style="color:#003366;font-weight:bold;">
+											<a data-toggle="collapse" href="#f8" style="color:#003366;font-weight:bold;
+												font-size:12px;">
 												Tamaño
 											</a>
 										</h4>
@@ -176,7 +184,8 @@
               				<div class="panel panel-default" style="width:100%;">
             						<div class="panel-heading" style="background-color:#fff;">
 										<h4 class="panel-title">
-											<a data-toggle="collapse" href="#f9" style="color:#003366;font-weight:bold;">
+											<a data-toggle="collapse" href="#f9" style="color:#003366;font-weight:bold;
+												font-size:12px;">
 												Almacenamiento
 											</a>
 										</h4>
@@ -241,9 +250,93 @@
                 		</div>
                 		
                 		<div class="modal-body">                
-       						<div class="container" style="margin:1%;width:82%;font-size:11px;">       				        
-        					    	
-        					</div>             
+       						<p:contentFlow value="#{productBean.productList}" var="prod">
+    							<p:graphicImage name="/img/productos/#{prod.prodImg}.jpg" styleClass="content" />
+							</p:contentFlow>
+									
+							<br/>       				
+							
+							<table class="table table-hover">
+  								<thead>
+    							<tr>
+      								<th scope="col">Especificaciones</th>
+      								<th scope="col">Descripción</th>
+      							</tr>
+  								</thead>
+  								
+  								<tbody>
+    							<tr>
+      								<th scope="row">1</th>
+      								<td>Mark</td>      
+    							</tr>
+    							
+    							<tr>
+      								<th scope="row">1</th>
+      								<td>Mark</td>      
+    							</tr>
+    							
+    							<tr>
+      								<th scope="row">1</th>
+      								<td>Mark</td>      
+    							</tr>
+    							
+    							<tr>
+      								<th scope="row">1</th>
+      								<td>Mark</td>      
+    							</tr>
+    							
+    							<tr>
+      								<th scope="row">1</th>
+      								<td>Mark</td>      
+    							</tr>
+    							
+    							<tr>
+      								<th scope="row">1</th>
+      								<td>Mark</td>      
+    							</tr>
+    							
+    							<tr>
+      								<th scope="row">1</th>
+      								<td>Mark</td>      
+    							</tr>
+    							
+    							<tr>
+      								<th scope="row">1</th>
+      								<td>Mark</td>      
+    							</tr>
+    							
+    							<tr>
+      								<th scope="row">1</th>
+      								<td>Mark</td>      
+    							</tr>
+    							
+    							<tr>
+      								<th scope="row">1</th>
+      								<td>Mark</td>      
+    							</tr>
+   
+						  		</tbody>
+							</table>
+							
+							<div style="width:200px;" align="center">
+			 					<div class="input-group number-spinner">
+									<span class="input-group-btn">
+										<button class="btn btn-default" data-dir="dwn">
+											<span class="glyphicon glyphicon-minus"></span>
+										</button>
+									</span>
+									<h:inputText class="form-control text-center" value="1"/>
+									<span class="input-group-btn">
+										<button class="btn btn-default" data-dir="up">
+											<span class="glyphicon glyphicon-plus"></span>
+										</button>
+									</span>
+								</div>
+			 					<br/>	
+								<h:commandButton value="Agregar a carrito" styleClass="btn btn-primary"/>
+							</div>
+        					
+        				           
                 		</div>
       					</h:form>
       	
@@ -252,7 +345,7 @@
     		</div>
 			
 				
-					
+		<h:outputScript library="js" name="delux.js"/>				
 	</h:body>
 </f:view>	
 </html>
