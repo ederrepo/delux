@@ -57,3 +57,13 @@ top: 0px !important;
 .companyHeaderGrid.ui-panelgrid .ui-panelgrid-cell {
     border: none;
 }
+
+/*
+.ui-datatable-header{
+	background-color:#fff !important;
+	color:blue !important;
+}
+
+.ui-datatable thead{
+    border-style: none;    
+}*/

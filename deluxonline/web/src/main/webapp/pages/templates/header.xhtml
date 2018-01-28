@@ -157,7 +157,7 @@
 			<h:form id="shpForm">            
                 <div class="modal-header">
                 	<button type="button" class="close" data-dismiss="modal">x</button>
-                    <h4 class="modal-title">Compras</h4>
+                    <h4 class="modal-title">Resumen de compras</h4>
                 </div>
                 
                 <center>
@@ -179,6 +179,10 @@
 							
 							<h:column>
 								<h:outputText value="#{prod.price}"/>
+							</h:column>
+							
+							<h:column>
+								<h:commandLink value="x" />
 							</h:column>
 						</h:dataTable>
 						<br/>

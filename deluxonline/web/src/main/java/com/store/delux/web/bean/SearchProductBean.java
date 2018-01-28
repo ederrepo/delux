@@ -7,12 +7,15 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
+import com.store.delux.commons.Constants;
 import com.store.delux.service.dto.ProductDTO;
 import com.store.delux.service.dto.PurchasedProductDTO;
+import com.store.delux.service.service.SearchProductService;
+import com.store.delux.service.service.impl.SearchProductServiceImpl;
 
 @ManagedBean(name = "productBean")
 @ViewScoped
-public class ProductsBean extends BaseBean {
+public class SearchProductBean extends BaseBean {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -20,17 +23,26 @@ public class ProductsBean extends BaseBean {
 	private boolean show;
 	
 	private HeadBean headBean;
+	private SearchProductService productService; 
 	
-	public ProductsBean(){
+	public SearchProductBean() throws Exception{
 		productList = new ArrayList<ProductDTO>();
 		headBean = new HeadBean();
+		productService = new SearchProductServiceImpl();
+		
 		show = false;
 		
 		this.getProducts();
 	}
 	
-	public String getProducts(){
-		ProductDTO prod = new ProductDTO();
+	public String getProducts() throws Exception{
+	
+		
+		productList = productService.getProductsByCategory(Constants.CATEGORY_LAPTOP_TYPE);
+		
+		
+		
+		/*ProductDTO prod = new ProductDTO();
 		
 		prod.setProdCode("HP2113-0986");
 		prod.setProdName("HP Ultrabook 2113");
@@ -93,7 +105,7 @@ public class ProductsBean extends BaseBean {
 		prod.setProdDesc("LaptopHP / Disco duro 150 gb / memoria 2 gb / pantalla 14");
 		prod.setPriceBuy(new BigDecimal(2435.34));
 		prod.setProdImg("lap_08");
-		productList.add(prod);
+		productList.add(prod);*/
 		
 		return null;
 	}

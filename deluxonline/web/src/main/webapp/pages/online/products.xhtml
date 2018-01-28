@@ -11,14 +11,15 @@
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>			
 	</h:head>
 	
-	<h:body style="background-color:#F2F4F4;">
+	<h:body style="background-color:#506D80;">
 			<h:outputStylesheet library="css" name="styles.css"/>
+			<h:outputStylesheet library="css" name="jquery-ui.css"/>
 			
 			<ui:include src="/pages/templates/header.xhtml" >
 				<ui:param name="head" value="#{productBean.headBean}"></ui:param>
 			</ui:include>
 					
-			<div class="container" style="background-color:white;margin-left:10px;margin-top:-20px;width:97%;">								
+			<div class="container" style="background-color:white;margin-top:-15px;width:99%;">								
 			<h:form id="prodForm">
 			<p:messages autoUpdate="true" showDetail="true" closable="true" style="font-size:12px;"/>
 			
