@@ -1,6 +1,7 @@
 package com.store.delux.db.entity;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.Date;
 import javax.persistence.Column;
@@ -42,7 +43,7 @@ public class Products  implements Serializable {
     private Timestamp dateReg;
     
     @Column(name="PRICE_BUY", nullable=false, precision=2, scale=0)
-    private byte priceBuy;
+    private BigDecimal priceBuy;
     
     @Column(name="SERIAL_CODE", length=50)
     private String serialCode;
@@ -112,11 +113,11 @@ public class Products  implements Serializable {
 		this.dateReg = dateReg;
 	}
 
-	public byte getPriceBuy() {
+	public BigDecimal getPriceBuy() {
 		return priceBuy;
 	}
 
-	public void setPriceBuy(byte priceBuy) {
+	public void setPriceBuy(BigDecimal priceBuy) {
 		this.priceBuy = priceBuy;
 	}
 
