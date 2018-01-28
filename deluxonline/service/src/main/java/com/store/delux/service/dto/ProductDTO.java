@@ -21,6 +21,7 @@ public class ProductDTO implements Serializable {
 	private Integer category;
 	private Integer qntty;
 	private Integer aviableFlg;
+	
 	public String getProdCode() {
 		return prodCode;
 	}

@@ -7,6 +7,7 @@ public class PurchasedProductDTO {
 	private String prodCode;
 	private String prodName;
 	private Integer qty;
+	private BigDecimal unitPrice;
 	private BigDecimal price;
 	
 	public String getProdCode() {
@@ -26,6 +27,12 @@ public class PurchasedProductDTO {
 	}
 	public void setQty(Integer qty) {
 		this.qty = qty;
+	}
+	public BigDecimal getUnitPrice() {
+		return unitPrice;
+	}
+	public void setUnitPrice(BigDecimal unitPrice) {
+		this.unitPrice = unitPrice;
 	}
 	public BigDecimal getPrice() {
 		return price;
